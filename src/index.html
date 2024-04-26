@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>تسک دوره جاوااسکریپت</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button
+        class="transac-btn"
+        id="showTransactionsBtn"
+        onclick="showTransactions()">
+        نمایش تراکنش‌ها
+      </button>
+      <div class="tablesection">
+        <div id="searchbox"  class="search-box">
+          <h1>لیست تراکنش ها</h1>
+          <form>
+            <div class="input-icons">
+              <span class="iconsearch"><i class="fa fa-search icon"></i></span>
+                <input type="search" id="searchrefid" placeholder="جستجو تراکنش...">
+            </div>
+        </form>
+        </div>
+        <table
+          class="transac-table"
+          id="transactionsTable"
+          style="display: none" >
+          <thead>
+            <tr class="bgheader">
+              <th>ردیف</th>
+              <th id="colorchange">نوع تراکنش</th>
+              <th>
+              مبلغ
+             <a class="chevronprice"> <i id="sortpricebtn" style="margin-right:15px" class="fa rotate180 chevron  fa-chevron-up"></i> </a>
+             </th>
+              <th>شماره پیگیری</th>
+              <th>
+                تاریخ
+              <a class="chevrondate">  <i id="sortdatebtn" style="margin-right:15px" class="fa rotate180 chevron fa-chevron-up"></i> </a> </th>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="transactionsBody"></tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/persian-date.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

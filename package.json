@@ -1,0 +1,16 @@
+{
+  "name": "js-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server -p 3000 ./data/db.json --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "moment": "^2.30.1",
+    "moment-jalaali": "^0.10.0"
+  }
+}
